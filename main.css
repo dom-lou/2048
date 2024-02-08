@@ -1,3 +1,16 @@
 body {
     background-color: #2d2b2b;
+    display: flex;
+    justify-content: center;
+}
+
+div#gameboard {
+    display: grid;
+    grid-template: repeat(4,100px) / repeat(4,100px);
+}
+
+div#gameboard div {
+    margin: 2px;
+    background-color: #dadada;
+    grid-column: 0/4;
 }
