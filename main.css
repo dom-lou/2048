@@ -22,7 +22,7 @@ div.title p#gamename {
 
 div#gameboard {
     display: grid;
-    grid-template: repeat(4,120px) / repeat(4,120px);
+    grid-template: repeat(4,18vh) / repeat(4,18vh);
 }
 
 div#gameboard div {
