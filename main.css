@@ -27,11 +27,13 @@ div.title p#gamename {
 
 div#gameboard {
     display: grid;
+    background-color: #3c3f3f;
     grid-template: repeat(4,18vh) / repeat(4,18vh);
 }
 
 div#gameboard div {
-    margin: 2px;
+    margin: 3px;
+    border-radius: 4px;
     background-color: #dadada;
     grid-column: 0/4;
 }
