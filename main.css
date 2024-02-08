@@ -4,36 +4,44 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0px;
-    padding: 0%;
+    padding: 0px;
     background-image: linear-gradient(120deg, #253f4a, #01060f);
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
 p {
-    text-align: center;
     color: #dadada;
+    text-align: center;
 }
 
 div.title p {
-    font-size: 1.3em;
     margin: 15px 0px 15px 0px;
+    font-size: 1.3em;
 }
 
 div.title p#gamename {
+    margin: 10px 0px 0px 0px;
     font-size: 3em;
     font-weight: bold;
-    margin: 10px 0px 0px 0px;
 }
 
 div#gameboard {
     display: grid;
-    background-color: #3c3f3f;
     grid-template: repeat(4,18vh) / repeat(4,18vh);
+    background-color: #3c3f3f;
 }
 
 div#gameboard div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 4px;
-    border-radius: 4px;
     background-color: #dadada;
-    grid-column: 0/4;
+    border-radius: 4px;
+}
+
+div#gameboard div p {
+    margin: 0px;
+    font-size: 2.2em;
+    color: #01060f;
 }
