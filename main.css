@@ -9,13 +9,18 @@ body {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
-div.title {
+p {
     text-align: center;
     color: #dadada;
 }
 
+div.title p {
+    font-size: 1.3em;
+    margin: 15px 0px 15px 0px;
+}
+
 div.title p#gamename {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bold;
     margin: 10px 0px 0px 0px;
 }
