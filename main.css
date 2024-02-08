@@ -1,50 +1,70 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    background-image: linear-gradient(120deg, #253f4a, #01060f);
+@keyframes show {
+	0% {
+		opacity: 50%;
+		transform: scale(0);
+	}
 }
 
 p {
-    color: #dadada;
-    text-align: center;
-}
-
-div.title p {
-    margin: 15px 0px 15px 0px;
-    font-size: 1.3em;
-}
-
-div.title p#gamename {
-    margin: 10px 0px 0px 0px;
-    font-weight: bold;
-    font-size: 3em;
-}
-
-div#gameboard {
-    grid-template: repeat(4,18vh) / repeat(4,18vh);
-    display: grid;
-    padding: 6px;
-    border-radius: 4px;
-    background-color: #242525;
+	color: #dadada;
+	text-align: center;
 }
 
 .cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 6px;
-    border-radius: 4px;
-    background-color: #dadada;
+	background-color: #dadada;
+	border-radius: 1vmin;
 }
 
-.cell p {
-    margin: 0px;
-    color: #242525;
-    font-weight: 600;
-    font-size: 2.2em;
+div#gameboard {
+	--cell-gap: 1vh;
+	--cell-size: 16vh;
+	--grid-size: 4;
+	background-color: #242525;
+	border-radius: 1vmin;
+	display: grid;
+	gap: var(--cell-gap);
+	grid-template: repeat(var(--grid-size),var(--cell-size))
+     / repeat(var(--grid-size),var(--cell-size));
+	padding: var(--cell-gap);
+	position: relative;
+}
+
+div.title p {
+	font-size: 1.3em;
+	margin: 15px 0px 15px 0px;
+}
+
+div.title p#gamename {
+	font-size: 3em;
+	font-weight: bold;
+	margin: 10px 0px 0px 0px;
+}
+
+body {
+	align-items: center;
+	background-image: linear-gradient(120deg, #253f4a, #01060f);
+	display: flex;
+	flex-direction: column;
+	font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+}
+
+.tile {
+	align-items: center;
+	animation: show 200ms ease-in-out;
+	background-color: hsl(200, 50%, var(--background-lightness));
+	border-radius: 1vmin;
+	color: hsl(200, 25%, var(--text-lightness));
+	display: flex;
+	font-size: 2.4em;
+	font-weight: 600;
+	height: var(--cell-size);
+	justify-content: center;
+	left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+	position: absolute;
+	top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+	transition: 100ms ease-in-out;
+	width: var(--cell-size);
 }
