@@ -28,7 +28,8 @@ div.title p#gamename {
 div#gameboard {
     display: grid;
     grid-template: repeat(4,18vh) / repeat(4,18vh);
-    background-color: #3c3f3f;
+    background-color: #242525;
+    border-radius: 4px;
 }
 
 div#gameboard div {
@@ -43,5 +44,6 @@ div#gameboard div {
 div#gameboard div p {
     margin: 0px;
     font-size: 2.2em;
-    color: #01060f;
+    font-weight: 600;
+    color: #242525;
 }
