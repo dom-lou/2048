@@ -5,7 +5,7 @@ body {
     height: 100vh;
     margin: 0px;
     padding: 0%;
-    background-image: linear-gradient(120deg, #1b2e36, #01060f);
+    background-image: linear-gradient(120deg, #253f4a, #01060f);
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
@@ -32,7 +32,7 @@ div#gameboard {
 }
 
 div#gameboard div {
-    margin: 3px;
+    margin: 4px;
     border-radius: 4px;
     background-color: #dadada;
     grid-column: 0/4;
