@@ -5,8 +5,8 @@ body {
     height: 100vh;
     margin: 0px;
     padding: 0px;
-    background-image: linear-gradient(120deg, #253f4a, #01060f);
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-image: linear-gradient(120deg, #253f4a, #01060f);
 }
 
 p {
@@ -21,29 +21,30 @@ div.title p {
 
 div.title p#gamename {
     margin: 10px 0px 0px 0px;
-    font-size: 3em;
     font-weight: bold;
+    font-size: 3em;
 }
 
 div#gameboard {
-    display: grid;
     grid-template: repeat(4,18vh) / repeat(4,18vh);
-    background-color: #242525;
+    display: grid;
+    padding: 6px;
     border-radius: 4px;
+    background-color: #242525;
 }
 
-div#gameboard div {
+.cell {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4px;
-    background-color: #dadada;
+    margin: 6px;
     border-radius: 4px;
+    background-color: #dadada;
 }
 
-div#gameboard div p {
+.cell p {
     margin: 0px;
-    font-size: 2.2em;
-    font-weight: 600;
     color: #242525;
+    font-weight: 600;
+    font-size: 2.2em;
 }
