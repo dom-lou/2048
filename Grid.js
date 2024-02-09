@@ -3,11 +3,13 @@ const cellSize = 16;
 const cellGap = 1;
 
 export default class Grid {
+    #cells
+    
     constructor(gridElement) {
         gridElement.style.setProperty("--grid-size", gridSize)
         gridElement.style.setProperty("--cell-size", `${cellSize}vh`)
         gridElement.style.setProperty("--cell-gap", `${cellGap}vh`)
-        this.cells = createCellElements(gridElement).map((cellElement, index) => {
+        this.#cells = createCellElements(gridElement).map((cellElement, index) => {
             return new Cell(cellElement, index % gridSize, Math.floor(index / gridSize))
         })
         console.log(this.cells)
