@@ -1,9 +1,7 @@
-// Declaring values
-const gameBoard = document.getElementById('gameboard');
-const score = document.getElementById('score');
+import Grid from "./Grid.js"
 
-/**
- * TO-DO:
- * Method to choose a random square and give it
- * a value of either 2 or 4.
- */
+// Declaring values
+const gameBoard = document.getElementById("gameboard");
+const score = document.getElementById("score");
+
+const grid = new Grid(gameBoard);

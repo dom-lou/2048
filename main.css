@@ -16,9 +16,6 @@ p {
 }
 
 div#gameboard {
-	--cell-gap: 1vh;
-	--cell-size: 16vh;
-	--grid-size: 4;
 	background-color: #242525;
 	border-radius: 1vmin;
 	display: grid;
