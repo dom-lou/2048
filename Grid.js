@@ -12,15 +12,17 @@ export default class Grid {
         this.#cells = createCellElements(gridElement).map((cellElement, index) => {
             return new Cell(cellElement, index % gridSize, Math.floor(index / gridSize))
         })
-        console.log(this.cells)
     }
 }
 
 class Cell {
+    #cellElement
+    #x
+    #y
     constructor(cellElement, x, y) {
-        this.cellElement = cellElement
-        this.x = x
-        this.y = y
+        this.#cellElement = cellElement
+        this.#x = x
+        this.#y = y
     }
 }
 
