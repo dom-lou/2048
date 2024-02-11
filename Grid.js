@@ -14,7 +14,7 @@ export default class Grid {
         })
     }
 
-    get cellsByColumn () {
+    get cellsByColumn() {
         return this.#cells.reduce((cellGrid, cell) => {
             cellGrid[cell.x] = cellGrid[cell .x] || []
             cellGrid[cell.x][cell.y] = cell

@@ -9,6 +9,7 @@ const grid = new Grid(gameBoard);
 grid.randomEmptyCell().tile = new Tile(gameBoard);
 grid.randomEmptyCell().tile = new Tile(gameBoard);
 setupInput();
+console.log(grid.cellsByColumn)
 
 function setupInput() {
     window.addEventListener("keydown", handleInput, {once: true});
@@ -16,7 +17,7 @@ function setupInput() {
 
 function handleInput(e) {
     console.log(e.key)
-    switch (e) {
+    switch (e.key) {
         case "ArrowUp":
             moveUp();
             break;
@@ -39,16 +40,29 @@ function handleInput(e) {
     setupInput();
 }
 
-function moveUp () {
+function moveUp() {
     return slideTiles(grid.cellsByColumn);
 }
 
+function moveDown() {
+    
+}
+
+function moveLeft() {
+
+}
+
+function moveRight() {
+    
+}
+
 function slideTiles(cells) {
+    // Loop through each cell by column, then row
     cells.forEach(group => {
         for (let i = 1; i < group.length; i++) {
             const cell = group[i];
             if (cell.tile == null) continue;
-            let lastValidCell = null;
+            let lastValidCell;
             for (let j = i-1; j >= 0; j--) {
                 const moveToCell = group[j];
                 if (!moveToCell.canAccept(cell.tile)) break;
